@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Folha v2 Reginaldo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div id="divAdd">
+            <div>
+                <h2>FOLHA DE PAGAMENTO</h2>
+            </div>
+            <div>
+                <labe class="lblTextos">Nome</label>
+                <input id="inputNome" onfocus="alterarVerde(event)" onblur="alterarBranco(event)"/>
+                <label class="lblTextos">Salario</label>
+                <input id="inputSalario" onfocus="alterarVerde(event)" onblur="alterarBranco(event)"/>
+                <button id="btnAdicionar" onclick="adicionarFuncionario()">Adicionar</button>
+            </div>
+            <div id="divlista">
+                <label id="lista">ID. Nome | Salario </label>
+            </div>
+            <div id="divTotal">
+                <label id="lblTotal">Total: R$ 0.000,00 </label>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        var numeroFuncionario =1;
+        var totalFolha = 0;
+        function adicionarFuncionario(){
+            const vNome = document.getElementById("inputNome").value;
+            const vSalario = document.getElementById("inputSalario").value;
+
+            if(vSalario!="" && !Number.isNaN(Number.parseFloat(vSalario)) ){
+                document.getElementById("lista").innerHTML += "<br/>" + numeroFuncionario + ". "  + vNome + " | " + "R$ " + vSalario;
+                numeroFuncionario++;
+                totalFolha = totalFolha + parseFloat(vSalario);
+                document.getElementById("lblTotal").innerHTML = "Total: R$ "+totalFolha;
+
+            }else{
+                return;
+            }
+        }       
+        function alterarVerde(obj){     
+        obj.target.style.backgroundColor = "rgba(5, 151, 5, 0.752)";
+        }
+        function alterarBranco(obj){      
+        obj.target.style.backgroundColor = "#ffffff";
+        }                                                                                                                                                                                                            
+
+
+    </script>
+    
+</body>
+</html>

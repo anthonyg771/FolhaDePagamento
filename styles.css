@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    height: 100vh;
+}
+
+.app{
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    flex-direction: column;
+    background-color: rgb(5, 216, 146);
+    height: 50vh;
+    border-color: rgb(189, 241, 20);
+    border-radius: 50px;
+    padding: 20px;
+
+}
+.divTitulo{
+    margin-bottom: 50px;
+}
+.grupoInput{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.label{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+.input{
+    width: 50%;
+    margin-right: 50px;
+}
+.input{
+    width: 50%;
+    margin-right: 50px;
+    border-color: transparent;
+    text-align: right;
+}
+.btnCalcular{
+    margin-top: 50px;
+    height: 40px;
+    width: 120px;
+    border-color: transparent;
+    background-color: rgb(171, 108, 231);
+    color: #ffffff;
+}
+.btnCalcular:hover{
+    cursor: pointer;
+}
